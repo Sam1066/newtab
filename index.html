@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1561.2">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Courier; color: #000000; -webkit-text-stroke: #000000}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Courier; color: #000000; -webkit-text-stroke: #000000; min-height: 14.0px}
+    span.s1 {font-kerning: none}
+    span.Apple-tab-span {white-space:pre}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">&lt;html&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta http-equiv="content-type" content="text/html; charset=UTF-16"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;head&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;title&gt;New Tab&lt;/title&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"&gt;&lt;/script&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;script&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>var bar_val = 10;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>function makeBar(x)</span></p>
+<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span> <span class="Apple-converted-space">    </span>return "VOLUME: " + "|".repeat(x) + "-".repeat(20 - x);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>$(document).ready(function() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>var t = setInterval(function() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span><span class="Apple-converted-space">    <span class="Apple-tab-span">	</span></span>document.getElementById("volume").innerHTML = makeBar(bar_val);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">    </span>if(bar_val &lt; 20 &amp;&amp; bar_val &gt; 0) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>bar_val += Math.floor((Math.random() * 3) - 1);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">    </span>} else if (bar_val &gt; 20) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>bar_val = 19;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">    </span>} else {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">        </span>bar_val = 1;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span><span class="Apple-converted-space">    </span>}, 300);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;style&gt;</span></p>
+<p class="p1"><span class="s1">@font-face {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-family: "VCR OSD Mono";</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>src: url(http://site.samhastings.co.uk/newtab/VCR.woff) format("woff"); <span class="Apple-converted-space">   </span></span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-tab-span">	</span></span></p>
+<p class="p1"><span class="s1">div.container {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>/* [position] */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>position: relative;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>top: 50px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>left: 100px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>width: 400px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>height: 100px;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">div.body {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>/* [position] */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>width: 550px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>margin-top: 20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>line-height: 1;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>/* [columns] */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>-webkit-column-count: 3;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>-webkit-column-gap: 20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>-moz-column-count: 3;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>-moz-column-gap: 20px;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">div#volume {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>/* [position */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>position: fixed;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>bottom: 100px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>right: 100px;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">div.fullscreen-bg {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>position: fixed;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>top: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>right: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>bottom: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>left: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>overflow: hidden;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>z-index: -100;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">div.fullscreen-bg__video {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>position: absolute;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>top: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>left: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>width: 100%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>height: 100%;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">h1 {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>/* [typeface &amp; colour] */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-family: VCR OSD Mono;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-size: 55;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>color: #FFFFFF;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">a {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>/* [typeface &amp; colour] */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-family: VCR OSD Mono;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-size: 25;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>text-decoration: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>color: #FFFFFF;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">body {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>/* [typeface &amp; colour] */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-family: VCR OSD Mono;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-size: 25;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>text-decoration: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>color: #FFFFFF;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background-color: black;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">&lt;/style&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;body&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="container"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;h1&gt;NEW TAB &gt;&gt;&gt;&lt;/h1&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="body"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;a href="https://www.instagram.com"&gt;INSTAGRAM&lt;/a&gt; &lt;br&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;a href="https://www.twitter.com"&gt;TWITTER&lt;/a&gt; &lt;br&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;a href="https://www.reddit.com"&gt;REDDIT&lt;/a&gt; &lt;br&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;a href="https://www.flickr.com"&gt;FLICKR&lt;/a&gt; &lt;br&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;a href="http://www.ffordes.co.uk"&gt;FFORDES&lt;/a&gt; &lt;br&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;a href="https://www.ebay.co.uk"&gt;EBAY&lt;/a&gt; &lt;br&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;a href="http://www.amazon.co.uk"&gt;AMAZON&lt;/a&gt; &lt;br&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;a href="http://www.wycameras.com"&gt;WY CAMERAS&lt;/a&gt; &lt;br&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;a href="https://www.netflix.com/browse"&gt;NETFLIX&lt;/a&gt; &lt;br&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;a href="https://app.plex.tv/web/app#"&gt;PLEX&lt;/a&gt; &lt;br&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;a href="https://www.engadget.com"&gt;ENGADGET&lt;/a&gt; &lt;br&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;a href="https://www.bloomberg.com"&gt;BLOOMBERG&lt;/a&gt; &lt;br&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;a href="http://www.bbc.co.uk/news"&gt;BBC NEWS&lt;/a&gt; &lt;br&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;a href="https://goo.gl/0K9TfA"&gt;OFFICE 365&lt;/a&gt; &lt;br&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;a href="http://www.progresso.net"&gt;PROGRESSO&lt;/a&gt; &lt;br&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div id="volume"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>VOLUME: |||||||||-----------</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="fullscreen-bg"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;video loop muted autoplay class="fullscreen-bg__video"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;source src="http://site.samhastings.co.uk/newtab/static.mp4" type="video/mp4"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/video&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
+</body>
+</html>
